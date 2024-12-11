@@ -1,22 +1,51 @@
-# Brute Force İle Detaylı Admin Panel Bulucu
+# Reksy Admin Panel Finder  
 
-Ben Reksy,
+**Reksy Admin Panel Finder**, brute-force yöntemiyle bir web sitesindeki yönetici giriş sayfalarını bulmak için geliştirilmiş güçlü bir Python aracıdır. Bu araç, hedef URL üzerinde belirli yolları dener ve yönetici giriş noktalarını tespit ederek çıktı dosyasına kaydeder.  
 
-Bu proje, bir web sitesinde yönetici giriş sayfalarını bulmak için geliştirilmiş bir brute-force tarayıcısını içerir. Bu Python kodu, belirli yolları deneyerek admin paneli bulmaya yönelik tasarlanmıştır. İşte projenin detaylı açıklaması:
+## 🚀 Özellikler  
+- **Admin Panel Bulucu**:  
+  Belirli yolları brute-force yöntemiyle tarayarak hedef sitenin admin giriş sayfalarını bulur.  
+- **Sonuçların Kaydedilmesi**:  
+  Bulunan admin panelleri, masaüstünüzde otomatik olarak `admins.txt` adlı bir dosyaya kaydedilir.  
+- **Kullanıcı Dostu**:  
+  Kolay kullanım için tasarlanmış, kullanıcıdan yalnızca URL girmesi beklenir.  
 
-## Proje Açıklaması
+## 🛠️ Gereksinimler  
+Bu aracı kullanabilmek için aşağıdaki Python kütüphanelerine ihtiyaç vardır:  
+- `requests`: HTTP isteklerini gerçekleştirmek için.  
+- `tqdm`: Tarama ilerleme çubuğunu göstermek için.  
+- `os`, `logging`, `random`: Python standart kütüphaneleri.  
 
-Bu Python kodu, aşağıdaki işlevleri yerine getirir:
+Kurulum için şu komutu çalıştırabilirsiniz:  
+```bash
+pip install requests tqdm
+```
+📖 Kullanım
+Kodun Çalıştırılması
 
-1. **Admin Paneli Bulma**: Kod, çeşitli admin yollarını test ederek hedef web sitesinde admin giriş sayfalarını bulur. Kullanıcıdan alınan URL üzerinde çeşitli yolları denemek suretiyle, admin giriş sayfalarını tespit etmeye çalışır.
+Python dosyasını indirin ve çalıştırın:
+```
+python reksy_admin_finder.py
+```
 
-2. **Çıktı Dosyası**: Bulunan admin giriş sayfalarının URL'leri, masaüstünüzde `admins.txt` dosyasına kaydedilir. Bu dosya, tarama sonuçlarını saklamak ve daha fazla analiz yapmak için kullanılır.
+Kullanıcıdan istenen URL'yi girin.
 
-3. **Kullanım Sonrası**: Tarayıcı tarafından bulunan admin giriş sayfalarını nasıl kullanabileceğiniz hakkında bilgi vermekte fayda var. Etik ve yasal sınırlar içinde kalmanız önemlidir. Web güvenliği testleri yaparken, genellikle izin alınması gerektiğini unutmayın.
+Sonuçların Kaydedilmesi
 
-## Kurulum ve Kullanım
+Tarama sonuçları, masaüstünüzde admins.txt dosyasına kaydedilecektir.
 
-1. **Gerekli Kütüphaneler**: Proje, `requests`, `random`, `logging`, `os` ve `tqdm` kütüphanelerini kullanır. Bu kütüphaneleri yüklemek için terminalde aşağıdaki komutu çalıştırabilirsiniz:
+Yasal Kullanım Uyarısı
 
-   ```bash
-   pip install requests tqdm
+Bu araç, yalnızca izinli güvenlik testleri için kullanılmalıdır.
+
+Her zaman etik ve yasal sınırlar içinde hareket ettiğinizden emin olun.
+
+🔍 Projenin Teknik Detayları
+
+Admin Panel Paths: Araç, yaygın olarak kullanılan admin panel yollarını dener.
+
+Çıkış Dosyası: Tespit edilen giriş sayfaları, yeniden kullanım veya analiz için admins.txt dosyasına kaydedilir.
+
+🌟 Katkıda Bulunun
+
+Proje hakkında geri bildirimde bulunmak veya katkıda bulunmak için GitHub üzerinden benimle iletişime geçebilirsiniz.
